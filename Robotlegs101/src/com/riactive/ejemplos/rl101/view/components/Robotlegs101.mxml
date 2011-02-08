@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:context="com.riactive.ejemplos.rl101.context.*" xmlns:valueobjects="com.riactive.ejemplos.rl101.model.valueobjects.*">
+	<s:layout>
+		<s:VerticalLayout verticalAlign="middle" horizontalAlign="center"/>
+	</s:layout>
+	
+	<s:controlBarLayout>
+		<s:VerticalLayout verticalAlign="middle" horizontalAlign="center"/>
+	</s:controlBarLayout>
+	
+	<fx:Declarations>
+		<context:MainContext contextView="{this}"/>
+	</fx:Declarations>
+	
+	<s:controlBarContent>
+		<s:Button id="obtenerButton" label="obtenerRecetas"/>
+	</s:controlBarContent>
+	
+	<s:DataGrid id="recetasDataGrid" requestedRowCount="4">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="recetaId" headerText="ID"></s:GridColumn>
+				<s:GridColumn dataField="nombre" headerText="Nombre"></s:GridColumn>
+				<s:GridColumn dataField="receta" headerText="Receta"></s:GridColumn>
+			</s:ArrayList>
+		</s:columns>
+		<s:typicalItem>
+			<valueobjects:Receta recetaId="1" nombre="Papas al horno" receta="Pues la papa la metes al horno y es como una bronca, mejor aprende Robotlegs"></valueobjects:Receta>
+		</s:typicalItem>
+		<s:ArrayList>
+			<valueobjects:Receta recetaId="2" nombre="Papas al horno" receta="Pues la papa la metes al horno y es como una bronca, mejor aprende Robotlegs"></valueobjects:Receta>
+			<valueobjects:Receta recetaId="3" nombre="Papas al horno" receta="Pues la papa la metes al horno y es como una bronca, mejor aprende Robotlegs"></valueobjects:Receta>
+			<valueobjects:Receta recetaId="4" nombre="Papas al horno" receta="Pues la papa la metes al horno y es como una bronca, mejor aprende Robotlegs"></valueobjects:Receta>
+		</s:ArrayList>
+	</s:DataGrid>
+	
+	
+</s:Application>
